@@ -27,6 +27,23 @@ end
 p jewels_in_stone("aA", "aAAbbbb")
 p jewels_in_stone("z", "ZZ")
 
-# Complexity of N^2
+# Complexity of J * L
 
+
+def jewels_in_stone_2(jewel, stone)
+  count = Hash.new(0)
+  stone.each_char do |i|
+    count[i] += 1
+  end
+  
+  return_counter = 0
+  jewel.each_char do |j|
+    return_counter += count[j] if count[j]
+  end
+  return_counter
+end
+
+
+p jewels_in_stone_2("aA", "aAAbbbb")
+# Complexity of J X L
 
