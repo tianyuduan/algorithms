@@ -9,7 +9,7 @@ def roman_to_int(string)
   end
   sum
 end
-p roman_to_int("MMCXVI")
+ roman_to_int("MMCXVI")
 
 def int_to_roman(int)
     m = ["", "M", "MM", "MMM"]
