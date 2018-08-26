@@ -44,21 +44,21 @@ def self_dividing_numbers(left, right)
   result = []
     i = left
     while i <= right #while i is smaller than right bound
-        str = i.to_s #coverts all int to string
+        str = i.to_s #converts all int to string
         j = 0
         c = 0
         while j < str.length
             if str[j].to_i == 0
                 break
             elsif i % str[j].to_i == 0
-                c+= 1
+                c += 1
             end
             j+= 1
         end
         if c == str.length
             result.push(i)
         end
-        i+=1
+        i += 1
     end
     return result
 end
