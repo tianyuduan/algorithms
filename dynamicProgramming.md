@@ -4,7 +4,6 @@ Dynamic programming amounts to breaking down an optimization problem into simple
 
 Memoization - technique known to store solutions
 
-
 The Dynamic Programming process:
 Step 1: Identify the sub-problem in words.
 Step 2: Write out the sub-problem as a recurring mathematical decision. (recursion)
@@ -26,7 +25,7 @@ end
 complexity: O(2^n)
 
 
-Memoization solution:
+Memoization solution:(top Down)
 
 
 def fib(n, memo)
@@ -42,8 +41,10 @@ end
 
 complexity at most is < 2N + 1 * O(1) = O(n)
 
+caps at ~ 1000, cuz of stackoverflow
 
-bottom up approach:
+
+bottom up approach: (Tabulation)
 
 def fib_bottom_up(n)
   if n == 1 or n == 2
@@ -57,3 +58,5 @@ def fib_bottom_up(n)
 end
 
 complexity O(n)
+
+does not cap at ~1000, since an iterative solution
