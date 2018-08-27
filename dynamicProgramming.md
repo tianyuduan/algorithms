@@ -24,8 +24,7 @@ end
 
 complexity: O(2^n)
 
-
-Memoization solution:(top Down)
+Memoization solution:()
 
 
 def fib(n, memo)
