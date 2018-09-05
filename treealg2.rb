@@ -39,14 +39,33 @@
 def InOrderKth(root, kth)
   inOrderArray = []
 
-  if (root.left && root.right == null)
-    inOrderArray << root
+  if (root.left && root.right != null)
+    inOrderArray << InOrderKth(root.left, kth)
+    inOrderArray.push(root)
+    inOrderArray << InOrderKth(root.right, kth)
+  else
+    inOrderArray.push(root)
   end
 
-    inOrderArray << InOrderKth(root.left, kth)
-
-    inOrderArray.push(root)
-    
-    inOrderArray << InOrderKth(root.right, kth)
 return inOrderArray[kth - 1]
+
 end
+
+
+const kthSmallest = function(root, k) {
+    let left = nodeCount(root.left);
+    if (left + 1 === k) {
+        return root.val;
+    } else if (left + 1 < k) {
+        return kthSmallest(root.right, k - left - 1);
+    } else {
+        return kthSmallest(root.left, k);
+    }
+};
+
+const nodeCount = (root) => {
+    if (root === null) {
+        return 0;
+    }
+    return 1 + nodeCount(root.left) + nodeCount(root.right);
+}
