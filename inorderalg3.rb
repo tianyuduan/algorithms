@@ -13,3 +13,20 @@
 # - The in-order successor of 8 is 10
 # - The in-order successor of 12 is 15
 # - The in-order successor of 25 doesn't exist
+
+# psuedo code would be to find the in order array,
+# and find the node in question,
+# and simply return the one after the return_Array
+
+def inOrderSuccessor(root)
+  rootArray = []
+  if root.left && root.right == null
+    rootArray.push(root)
+  end
+
+  if (root.left && root.right != null)
+    inOrderSuccessor(root.left)
+    root
+    inOrderSuccessor(root.right)
+  end
+end
