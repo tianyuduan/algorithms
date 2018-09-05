@@ -1,7 +1,13 @@
 Find Largest Value in Each Tree Row
 You need to find the largest value in each row of an n-ary tree.
 Example:
-Input:             1          / \ \         3   2  12        / \   \   \       5   3   9   7  Output: [1, 12, 9]
+Input:             1        
+                / \ \       
+              3   2  12       
+             / \   \   \       
+            5   3   9   7  
+
+Output: [1, 12, 9]
 /**
  * Definition for a tree node.
  * function TreeNode(val) {
