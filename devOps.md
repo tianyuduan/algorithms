@@ -32,3 +32,20 @@ Test Automation - Test automation has been around for a long time. DevOps testin
 Pipeline Orchestration - A pipeline is like a manufacturing assembly line that happens from the time a developer says, “I think I’m done,” all the way to the time that the code gets deployed in the production or a late-stage pre-production environment.
 
 Unifying Enterprise Software Development and Delivery - The VersionOne Enterprise Agile Platform unifies agile application lifecycle management and DevOps, providing a full picture of your entire software delivery pipeline in a single platform. VersionOne® Continuum™ for DevOps is an enterprise continuous delivery solution for automating, orchestrating, and visualizing the flow of change throughout the software delivery cycle.
+
+Summarizing Continuous Integration and delivery
+
+CI- development practice of ensuring your application is always in a good state.
+
+Having well written unit tests?
+Having staging, development and prod environments
+
+testing any database migrations or config changes before production
+
+CD-
+automated/manual way to deploy your application to an environment
+
+Netflix is known to have a completely automated continuous delivery system
+
+Your CI pipeline is usually triggered when code is checked into an integration branch by a developer. Unit tests are run to ensure basic functionality is correct, and then, binaries are built. The binaries created could be a JAR or Zip file or even a Docker container.
+The CD can be triggered after a successful build, or it can be timed. Typically, for dev environments, your CD pipeline will be triggered by every successful build. Deployment to production can be an automatic process or can require manual sign off.
