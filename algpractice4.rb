@@ -26,3 +26,34 @@ Output: false
 Example 5:
 Input: "{[]}"
 Output: true
+
+Example 6:
+Input “([]) {}”
+Output: true
+
+Need to iterate the string
+Ideally O(N)
+
+
+Example 4:
+Input: "([)]"
+Output: false
+
+
+
+Def StringValid(string)
+	opening =
+[“}“=>”{”,
+ “)“=>”(”,
+ “]“=>”[” ]
+	Stack = []
+string.split(‘’).each do |i|
+Stack << i if Opening.include?(i)
+If !(opening.include?(i))
+	Pop = stack.pop
+	return false if opening[i] != Pop
+end
+end
+Return true If stack == nil
+false
+end
