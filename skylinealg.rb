@@ -49,18 +49,21 @@ def SkylineMax(grid)
 
   ## create new Matrix
   matrixNew = Array.new(grid.length, 0) {Array.new(grid.length, 0)}
-
   maxArray = []
+  maxArray2 = []
   tdArray.each do |max|
     lrArray.each do |min|
       if min > max
         min = max
       end
-      array << min
+      maxArray << min
+      if maxArray.length > 3
+        maxArray2 << maxArray
+        maxArray = []
+      end
     end
-    return array
   end
-
+   maxArray2
 end
 
 p SkylineMax([[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]])
