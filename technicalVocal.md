@@ -23,3 +23,36 @@ const longLivedVariable = "I'm here for a long time";
 returns a reference to the innerFunction;
 
 this way closure can be used to save state;
+
+what is ajax ?
+
+AJAX = Asynchronous JavaScript And XML.
+AJAX just uses a combination of:
+A browser built-in XMLHttpRequest object (to request data from a web server)
+JavaScript and HTML DOM (to display or use the data)
+- Ajax isnt a technology, its several. coming together, in powerful ways
+Update a web page without reloading the page
+Request data from a server - after the page has loaded
+Receive data from a server - after the page has loaded
+Send data to a server - in the background
+ - AJAX incorporates XHTML and CSS
+ - the DOM
+ - JavaScript
+ - XMLhttpRequest
+ - XML and XSLT
+
+
+Explain an Ajax request:
+
+ Simply put, the use of AJAX is to use javaScript to send HTTP Requests to the server without reloading the page.
+
+Its an API to create asynchronous web applications.
+
+JavaScript and the XMLHttpRequest object provide the method for exchanging data asynchronously between the browser and the server.
+A user interaction in the browser triggers the event, such as a button click
+The AJAX call fires. This creates and AJAX request, browsers use the XMLHttpRequest object. When the server responds to the browser’s request, the same XMLHttpRequest object will process the result.
+3. The server-side script receives the input from JavaScript, and processes the data.
+4. After the data is processed, the script sends the data back to the original client-side page that made the request via XML
+5. Once the data is received, a second JavaScript callback function, is called this function captures the data, and updates the web page accordingly.
+
+Note: Newer technologies have slowly been replacing the XML in AJAX with JSON. The reason being, XML is a lot stricter than HTML, thus having larger file sizes, and harder to extract the data that is returned. JSON is less verbose, has proven to be more efficient, and working with data is much easier.
