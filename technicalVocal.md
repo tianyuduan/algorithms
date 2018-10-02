@@ -56,3 +56,21 @@ The AJAX call fires. This creates and AJAX request, browsers use the XMLHttpRequ
 5. Once the data is received, a second JavaScript callback function, is called this function captures the data, and updates the web page accordingly.
 
 Note: Newer technologies have slowly been replacing the XML in AJAX with JSON. The reason being, XML is a lot stricter than HTML, thus having larger file sizes, and harder to extract the data that is returned. JSON is less verbose, has proven to be more efficient, and working with data is much easier.
+
+what is a restful API?
+
+An API is a contract between one software and another piece of software, its a structured request and response.
+
+API is like an waiter between two  running software.
+
+Well, Rest is representational state transfer, architectural style for designing network applications.
+
+It is based off a stateless, client-server protocol, almost always HTTP
+
+restful and rest API are essentially the same thing
+
+HTTP Methods: get, post, delete, put
+
+endpoints is an URL/URI that the HTTP requests are sent to
+
+whats the difference between HTTP and HTTPs?
