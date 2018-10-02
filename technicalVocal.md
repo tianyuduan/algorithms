@@ -74,3 +74,13 @@ HTTP Methods: get, post, delete, put
 endpoints is an URL/URI that the HTTP requests are sent to
 
 whats the difference between HTTP and HTTPs?
+
+HTTP stands for Hypertext Transfer Protocol. This protocol allows communication between different systems. When you type any web address, your browser acts as a client and the computer act as a server. HTTP uses TCP (Transmission Control Protocol), generally over port 80, to send and receive data packets over the web.
+
+How it functions?
+
+The client sends a request message to a HTTP server which hosts a website, the server then replies with the response message that contains completion status information, such as “HTTP/1.1 200 OK”.
+
+HTTPS stands for Hypertext Transfer Protocol Secure. This protocol allows a secure communication between different systems. It encrypts all data during the communication. HTTPS also uses TCP (Transmission Control Protocol) to send and receive data packets, but it does so over port 443, within a connection encrypted by Transport Layer Security (TLS).
+
+migrating over to HTTPS requires a SSL certificate
