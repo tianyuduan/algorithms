@@ -263,17 +263,6 @@ Declaring the variables of a class as private.
 Providing public setter and getter methods to modify and view the variables values.
 Let us look at the code below to get a better understanding of encapsulation:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
 public class Employee {
  private String name;
  public String getName() {
@@ -302,8 +291,6 @@ a) Abstract Class
 
 b) Interface
 
-
-
 Let’s understand these concepts in more detail.
 
 Abstract class: Abstract class in Java contains the ‘abstract’ keyword. Now what does the abstract keyword mean? If a class is declared abstract, it cannot be instantiated, which means you cannot create an object of an abstract class. Also, an abstract class can contain abstract as well as concrete methods.
@@ -313,8 +300,6 @@ To use an abstract class, you have to inherit it from another class where you ha
 
 Let’s look at the syntax of an abstract class:
 
-1
-2
 Abstract class Mobile {   // abstract class mobile
 Abstract void run();      // abstract method
 Interface: Interface in Java is a blueprint of a class or you can say it is a collection of abstract methods and static constants. In an interface, each method is public and abstract but it does not contain any constructor. Along with abstraction, interface also helps to achieve multiple inheritance in Java.
@@ -322,11 +307,6 @@ Note: You can achieve 100% abstraction using interfaces.
 
 So an interface basically is a group of related methods with empty bodies. Let us understand interfaces better by taking an example of a ‘ParentCar’ interface with its related methods.
 
-1
-2
-3
-4
-5
 public interface ParentCar {
 public void changeGear( int newValue);
 public void speedUp(int increment);
@@ -341,33 +321,6 @@ Since all the functionalities are common with all my subclasses, I have created 
 Next, let’s look into the functionality as to how you can implement this interface.
 So to implement this interface, the name of your class would change to any particular brand  of a Car, let’s say I’ll take an “Audi”. To implement the class interface, I will use the ‘implement’ keyword as seen below:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
 public class Audi implements ParentCar {
 int speed=0;
 int gear=1;
@@ -419,3 +372,19 @@ Polymorphism in Java is of two types:
 
 Run time polymorphism
 Compile time polymorphism
+
+On the other hand, Polymorphism is an ability of Object to behave in multiple forms.
+
+method override vs method overload
+
+
+
+1) Inheritance defines father-son relationship between two classes, While Polymorphism take advantage of that relationship to add dynamic behaviour in your code.
+
+2) Inheritance is meant for code reuse, initial idea is to reuse what is written inside Parent class and only write code for new function or behaviour in Child class. On the other hand Polymorphism allows Child to redefine already defined behaviour inside parent class. Without Polymorphism it's not possible for a Child to execute its own behaviour while represented by a Parent reference variable, but with Polymorphism he can do that.
+
+3) Polymorphism helps tremendously during Maintenance. In fact many object oriented design principles are based on Polymorphism e.g. programming for interface then implementation, which advocates to use interface everywhere in your code, to represent variable, in method parameters, in return type of method etc; so that code can take advantage of polymorphism and do more than what was expected it to do during writing.
+
+4) Java doesn't allow multiple inheritance of classes, but allows multiple inheritance of Interface, which is actually require to implement Polymorphism. For example a Class can be Runnable, Comparator and Serializable at same time, because all three are interfaces. This makes them to pass around in code e.g. you can pass instance of this class to a method which accepts Serializable, or to Collections.sort() which accepts a Comparator.
+
+5) Both Polymorphism and Inheritance allow Object oriented programs to evolve. For example, by using Inheritance you can define new user types in an Authentication System and by using Polymorphism you can take advantage of already written authentication code. Since, Inheritance guarantees minimum base class behaviour, a method depending upon super class or super interface can still accept object of base class and can authenticate it.
