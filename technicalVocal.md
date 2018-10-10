@@ -61,7 +61,7 @@ what is a restful API?
 
 An API is a contract between one software and another piece of software, its a structured request and response.
 
-API is like an waiter between two  running software.
+API is like an waiter between two running software.
 
 Well, Rest is representational state transfer, architectural style for designing network applications.
 
@@ -84,7 +84,6 @@ The client sends a request message to a HTTP server which hosts a website, the s
 HTTPS stands for Hypertext Transfer Protocol Secure. This protocol allows a secure communication between different systems. It encrypts all data during the communication. HTTPS also uses TCP (Transmission Control Protocol) to send and receive data packets, but it does so over port 443, within a connection encrypted by Transport Layer Security (TLS).
 
 migrating over to HTTPS requires a SSL certificate
-
 
 what are the  4 OOP concepts and can you go into detail about them?
 
@@ -378,7 +377,6 @@ On the other hand, Polymorphism is an ability of Object to behave in multiple fo
 method override vs method overload
 
 
-
 1) Inheritance defines father-son relationship between two classes, While Polymorphism take advantage of that relationship to add dynamic behaviour in your code.
 
 2) Inheritance is meant for code reuse, initial idea is to reuse what is written inside Parent class and only write code for new function or behaviour in Child class. On the other hand Polymorphism allows Child to redefine already defined behaviour inside parent class. Without Polymorphism it's not possible for a Child to execute its own behaviour while represented by a Parent reference variable, but with Polymorphism he can do that.
@@ -388,3 +386,54 @@ method override vs method overload
 4) Java doesn't allow multiple inheritance of classes, but allows multiple inheritance of Interface, which is actually require to implement Polymorphism. For example a Class can be Runnable, Comparator and Serializable at same time, because all three are interfaces. This makes them to pass around in code e.g. you can pass instance of this class to a method which accepts Serializable, or to Collections.sort() which accepts a Comparator.
 
 5) Both Polymorphism and Inheritance allow Object oriented programs to evolve. For example, by using Inheritance you can define new user types in an Authentication System and by using Polymorphism you can take advantage of already written authentication code. Since, Inheritance guarantees minimum base class behaviour, a method depending upon super class or super interface can still accept object of base class and can authenticate it.
+
+
+Overloading: Many Methods, One Name
+
+Overloading occurs when two or more methods in one class have the same method name but different parameters.
+
+Overriding: Same Name, Same Parameters
+
+ having two methods with the same method name and parameters (i.e., method signature). One of the methods is in the parent class and the other is in the child class. Overriding allows a child class to provide a specific implementation of a method that is already provided its parent class.
+
+ 2). Polymorphism applies to overriding, not to overloading.
+3). Overriding is a run-time concept while overloading is a compile-time concept.
+
+class Dog{
+    public void bark(){
+        System.out.println("woof ");
+    }
+}
+class Hound extends Dog{
+    public void sniff(){
+        System.out.println("sniff ");
+    }
+
+    public void bark(){
+        System.out.println("bowl");
+    }
+}
+
+public class OverridingTest{
+    public static void main(String [] args){
+        Dog dog = new Hound();
+        dog.bark();
+    }
+}
+
+In the example above, the dog variable is declared to be a Dog. During compile time, the compiler checks if the Dog class has the bark() method. As long as the Dog class has the bark() method, the code compilers. At run-time, a Hound is created and assigned to dog. The JVM knows that dog is referring to the object of Hound, so it calls the bark() method of Hound. This is called Dynamic Polymorphism.
+
+how does the internet work?
+
+- server is a box with an ip address
+- ISP(Internet Service Provider ) does an DNS(Domain Name System) look up
+- basically translates mysite.com into ip address(translates domain friendly names into Ip addresses computers can use to communicate with each other)
+- if found in local memory, website renders in a split second.  
+- if not found in local memory, takes it out to the internet, where it asks for a series of queries, a series of DNS servers
+- the first DNS server takes the domain name, if not found, it goes to the next DNS server
+- once found, it returns the IP address back to the computer
+- gets response back thats file/content type
+- gives back html file
+- begins parsing HTML document
+- CSS, HTML, Jquery(javaScript) in that order
+- Example: I request for google.com - get request
